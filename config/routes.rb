@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]
-  resource :search, only: [:show]
+  resource :search, only: :show
+  resources :stores, only: :show
+
 
 
   namespace :api do

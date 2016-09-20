@@ -14,4 +14,12 @@ class Store < OpenStruct
     return stores, raw_stores["total"]
   end
 
+  def self.find_store_by_id(store_id)
+    raw_store = service.find_store_by_id(store_id)
+
+    raw_store["stores"].map do |raw_store|
+      Store.new(raw_store)
+    end[0]
+  end
+
 end

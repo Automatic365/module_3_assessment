@@ -15,6 +15,15 @@ class StoresService
     parse(response.body)
   end
 
+  def find_store_by_id(store_id)
+    response = @conn.get("/v1/stores(storeId=#{store_id})") do |req|
+      req.params['apiKey'] = ENV['BEST_BUY_API_KEY']
+      req.params['show'] = 'name,storeType,address,city,region,postalCode,hoursAmPm'
+      req.params['format'] = 'json'
+    end
+    parse(response.body)
+  end
+
   private
 
   def parse(response)

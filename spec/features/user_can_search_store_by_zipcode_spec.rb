@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User can search by zip code' do
+RSpec.feature 'User can search by zip code' do
   scenario 'they see a list of stores close to zip code' do
     VCR.use_cassette("stores") do
       # As a user
