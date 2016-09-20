@@ -1,1 +1,9 @@
 <h1>Search Results</h1>
+
+<% @stores.each do |store| %>
+<%= store.longName%>
+<%= store.city %>
+<%= store.distance %>
+<%= store.phone %>
+<%= store.storeType %><br>
+<% end %>

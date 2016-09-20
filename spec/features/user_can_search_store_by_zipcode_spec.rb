@@ -5,7 +5,7 @@ feature 'User can search by zip code' do
     VCR.use_cassette("stores") do
       # As a user
       # When I visit "/"
-      visit 'root_path'
+      visit root_path
       # And I fill in a search box with "80202" and click "search"
       fill_in :zipcode, with: "80202"
       click_on "Search for Stores"

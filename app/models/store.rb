@@ -5,8 +5,13 @@ class Store < OpenStruct
     @service = StoresService.new
   end
 
-  def find_store_by_zipcode(zipcode)
-    service.find_store_by_zipcode(zipcode)
+  def self.find_store_by_zipcode(zipcode)
+    raw_stores = service.find_store_by_zipcode(zipcode)
+
+    stores = raw_stores["stores"].map do |raw_store|
+      Store.new(raw_store)
+    end
+    return stores, raw_stores["all"]
   end
 
 end

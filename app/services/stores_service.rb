@@ -6,7 +6,7 @@ class StoresService
   end
 
   def find_store_by_zipcode(zipcode)
-    response = conn.get("v1/stores((area#{zipcode},25))") do |req|
+    response = conn.get("/v1/stores(area(#{zipcode},25))") do |req|
       req.params['apiKey'] = ENV['BEST_BUY_API_KEY']
       req.params['show'] = 'storeId,longName,city,distance,phone,storeType'
       req.params['pageSize'] = '15'
@@ -18,7 +18,7 @@ class StoresService
   private
 
   def parse(response)
-    JSON.parse(response.body, object_class: OpenStruct)
+    JSON.parse(response, object_class: OpenStruct)
   end
 
 end
