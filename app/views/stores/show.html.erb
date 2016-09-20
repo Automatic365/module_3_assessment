@@ -4,4 +4,9 @@
   <h3>Store Type: <%= @store.storeType %></h3>
   <h4>Address: <%= @store.address %>, <%= @store.city %>, <%= @store.region %> <%= @store.postalCode %></h4>
 
-  
+  <h4>Store Hours:</h4>
+  <ul>
+    <% @store.store_hours.each do |store_hour| %>
+      <li><%= store_hour %></li>
+    <% end %>
+  </ul>

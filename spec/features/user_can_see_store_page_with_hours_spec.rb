@@ -21,7 +21,7 @@ RSpec.feature 'User can see a store page' do
       expect(page).to have_content('Cherry Creek Shopping Center')
       expect(page).to have_content('Store Type: Mobile')
       expect(page).to have_content('Address:  3000 East First Ave, Denver, CO 80206')
-      # expect(page).to have_content('Mon: 10am-9pm')
+      expect(page).to have_content('Mon: 10am-9pm')
     end
   end
 end
