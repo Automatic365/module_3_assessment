@@ -11,7 +11,7 @@ class Store < OpenStruct
     stores = raw_stores["stores"].map do |raw_store|
       Store.new(raw_store)
     end
-    return stores, raw_stores["all"]
+    return stores, raw_stores["total"]
   end
 
 end

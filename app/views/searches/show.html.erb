@@ -1,9 +1,24 @@
-<h1>Search Results</h1>
+<h1> Search Results</h1>
 
-<% @stores.each do |store| %>
-<%= store.longName%>
-<%= store.city %>
-<%= store.distance %>
-<%= store.phone %>
-<%= store.storeType %><br>
-<% end %>
+<h3><%= @all %> Total Stores</h3>
+
+
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Distance</th>
+      <th>Phone Number</th>
+      <th>Store Type</th>
+    </tr>
+
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.longName %></td>
+        <td><%= store.city %></td>
+        <td><%= store.distance %></td>
+        <td><%= store.phone %></td>
+        <td><%= store.storeType %></td>
+      </tr>
+    <% end %>
+  </table>

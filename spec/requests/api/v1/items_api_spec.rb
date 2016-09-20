@@ -8,7 +8,6 @@ describe 'Items API' do
 
     get '/api/v1/items'
 
-    require "pry"; binding.pry
     response = JSON.parse(response.body)
 
     expect(response.count).to eq(2)
