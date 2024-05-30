@@ -25,5 +25,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'
-  gem 'capybara'
+  gem 'capybara', '>= 2.9.1'
 end
