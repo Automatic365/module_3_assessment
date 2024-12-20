@@ -11,7 +11,7 @@ gem "jbuilder", "~> 2.0"
 gem "faker"
 gem "therubyracer"
 gem "less-rails-bootstrap"
-gem "minitest-rails"
+gem "minitest-rails", ">= 8.0.0"
 gem 'figaro'
 gem 'faraday'
 gem 'responders'
