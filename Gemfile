@@ -22,7 +22,7 @@ end
 
 group :development, :test do
   gem "pry", :require => "pry"
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem 'vcr'
   gem 'webmock'
   gem 'capybara'
