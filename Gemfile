@@ -13,7 +13,7 @@ gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem 'figaro'
-gem 'faraday'
+gem 'faraday', '>= 2.14.1'
 gem 'responders'
 
 group :development do
